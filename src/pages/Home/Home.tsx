@@ -7,6 +7,10 @@ import "swiper/swiper-bundle.min.css";
 import CardDivision from "../../components/CardComponent/CardDivision";
 import { Button } from "semantic-ui-react";
 import CardArticle from "../../components/CardComponent/CardArticle";
+import shirtImage from "./shirt.png";
+import tributeImage from "./person.png";
+import CardProduct from "../../components/CardComponent/CardProduct";
+import { Footer } from "../../components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -57,7 +61,10 @@ const Home: React.FC = () => {
         <section className="content">
           <section className="main-article">
             <div className="main">
-              <img src="https://pbs.twimg.com/media/E0Vis3sVIAIYcH_.jpg"></img>
+              <img
+                src="https://pbs.twimg.com/media/E0Vis3sVIAIYcH_.jpg"
+                alt="events"
+              />
             </div>
             <div className="sider">
               <section className="title-main">
@@ -108,7 +115,10 @@ const Home: React.FC = () => {
         <section className="content">
           <section className="main-article">
             <div className="main">
-              <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_klook_water/activities/pq1hkwos4nzbktsl8s4d/Ayung%20River%20Light%20Rafting%20Experience%20by%20Bali%20Sobek.jpg"></img>
+              <img
+                src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_klook_water/activities/pq1hkwos4nzbktsl8s4d/Ayung%20River%20Light%20Rafting%20Experience%20by%20Bali%20Sobek.jpg"
+                alt="article"
+              />
             </div>
             <div className="sider">
               <section className="title-main">
@@ -130,7 +140,7 @@ const Home: React.FC = () => {
         </section>
       </div>
 
-      <div className="articles">
+      <div className="merchandise">
         <section className="title-box">
           <h1 className="heading">Merchandise</h1>
           <p className="subHeading">
@@ -138,8 +148,66 @@ const Home: React.FC = () => {
             the brands of the Harsha Pratala business entity
           </p>
         </section>
-        <section className="content"></section>
+
+        <div className="content">
+          <div className="merch-banner">
+            <section className="merch-banner-text">
+              <h1 className="heading" style={{ color: "white" }}>
+                Tetap keren walau di tengah rimba
+              </h1>
+              <p className="subHeading" style={{ color: "white" }}>
+                Feedloop enables enterprises across industries to achieve
+                digital operational excellence and digital
+              </p>
+              <Button id="btn">Discover</Button>
+            </section>
+            <img src={shirtImage} alt="product" />
+          </div>
+          <Swiper
+            slidesPerView={2.4}
+            spaceBetween={30}
+            freeMode={false}
+            pagination={{
+              clickable: true,
+            }}
+            className="merch-slider"
+            initialSlide={0}
+          >
+            <SwiperSlide>
+              <CardProduct />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardProduct />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardProduct />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardProduct />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
+
+      <div className="tributes">
+        <div className="tributes-box">
+          <section className="tributes-text">
+            <h1 className="heading" style={{ color: "white" }}>
+              Tributes To Our Brothers
+            </h1>
+            <p className="subHeading" style={{ color: "white" }}>
+              HP melakukan penyaringan melalui pendidikan dasar dan beberapa
+              perjalanan 4 divisi yaitu jeram, panjat tebing, selusur goa, dan
+              gunung & hutan . Setelah perjalanan 4 divisi, selanjutnya adalah
+              spesialisasi 1 divisi yang telah dipilih.
+            </p>
+          </section>
+          <section className="tribute-image">
+            <img src={tributeImage} alt="tributes" id="tributes-image" />
+          </section>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Card.scss";
 import businessPerson from "../../asset/img/bussiness-person.jpg";
 
@@ -8,7 +7,7 @@ const CardArticle = () => {
   return (
     <div className="article-card">
       <div className="article-image">
-        <img src={src} />
+        <img src={src} alt="article" />
       </div>
       <div className="article-title">
         <h4 className="heading">

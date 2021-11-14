@@ -1,28 +1,35 @@
 import React from "react";
 import "./Card.scss";
-import image from "./lostcity.jpeg";
-import { Button } from "semantic-ui-react";
 
-const CardDivision = () => {
+interface IDivisionCardProps {
+  division: {
+    title: string;
+    img: string;
+    icon: string;
+    description: string;
+  };
+}
+
+const CardDivision: React.FC<IDivisionCardProps> = ({ division }) => {
   return (
     <div
       className="division-card"
       style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${division.img})`,
+        boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, 0.747)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       <div className="dark-overlay">
         <section className="title-card">
           <h3 className="heading" style={{ color: "white" }}>
-            ROCK CLIMBING
+            {division.title}
           </h3>
           <p className="subHeading" style={{ color: "white" }}>
-            Feedloop enables enterprises across industries to achieve digital
-            operational excellence and digital
+            {division.description}
           </p>
-          <Button basic color="black" className="button-card">
-            Dicover
-          </Button>
+          <button className="button-card">Dicover</button>
         </section>
       </div>
     </div>

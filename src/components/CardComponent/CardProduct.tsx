@@ -20,7 +20,7 @@ const CardProduct = () => {
             Feedloop enables enterprises across industries to achieve digital
             operational excellence and digital
           </p>
-          <Button basic color="black" className="button-card">
+          <Button basic className="button-card">
             RP. 125K
           </Button>
         </section>

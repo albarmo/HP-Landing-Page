@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Input, Button, Icon, Transition } from "semantic-ui-react";
+import React from "react";
+import { Input, Icon, Transition } from "semantic-ui-react";
 import "./navbar.scss";
 
 type Props = {
@@ -9,7 +9,6 @@ type Props = {
 const Menu = () => {
   return (
     <ul>
-      <li>Sejarah</li>
       <li>Artikel</li>
       <li>Kontak Kami</li>
       <li>Penjelajahan</li>
@@ -54,7 +53,7 @@ const NavbarComponent: React.FC<Props> = ({ menu }) => {
     <div
       className="navbar"
       style={
-        scrollY > 0
+        scrollY > 500
           ? {
               backgroundColor: "white",
               color: "black",
@@ -97,7 +96,7 @@ const NavbarComponent: React.FC<Props> = ({ menu }) => {
             </div>
           </Transition.Group>
         ) : (
-          <Fragment>
+          <>
             <div className="menu">
               <Menu />
             </div>
@@ -114,13 +113,6 @@ const NavbarComponent: React.FC<Props> = ({ menu }) => {
                       id="nav-input"
                       placeholder="Search..."
                     />
-                    {/* <Input 
-                                                    icon="search"
-                                                    className="searc-box"
-                                                    placeholder="Search..."
-                                                    id="nav-input"
-                                                    
-                                                /> */}
                   </Transition>
                 </div>
               </Transition.Group>
@@ -131,17 +123,12 @@ const NavbarComponent: React.FC<Props> = ({ menu }) => {
                     size="small"
                     icon="search"
                     placeholder="Search..."
-                    id="nav-input"
+                    id={scrollY > 500 ? "" : "nav-input"}
                   />
-                </Transition>
-                <Transition animation="pulse" duration={500}>
-                  <Button primary size="medium" id="nav-button">
-                    Login Anggota
-                  </Button>
                 </Transition>
               </div>
             )}
-          </Fragment>
+          </>
         )}
       </div>
     </div>

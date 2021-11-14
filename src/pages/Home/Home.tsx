@@ -108,7 +108,7 @@ const Home: React.FC = () => {
         <button className="button-cta">Join Now</button>
       </div>
 
-      <div className="articles">
+      <div className="events">
         <section className="title-box">
           <h1 className="heading">Stay tuned, theres Incoming Even</h1>
         </section>

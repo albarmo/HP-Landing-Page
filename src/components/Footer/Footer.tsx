@@ -14,8 +14,10 @@ const Footer: React.FC = () => {
             >
               HARSHA PRATALA
             </h1>
-            Jl. TMP. Kalibata No.1, RT.4/RW.04, Duren Tiga, Kec. Pancoran, Kota
-            Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760
+            <p>
+              Jl. TMP. Kalibata No.1, RT.4/RW.04, Duren Tiga, Kec. Pancoran,
+              Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760
+            </p>
           </section>
           <section className="footer-right">
             <section className="social-media">

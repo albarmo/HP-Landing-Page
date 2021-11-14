@@ -46,7 +46,7 @@
       .main {
         width: 58%;
         height: 100%;
-        background-color: dodgerblue;
+        background-color: transparent;
 
         img {
           width: 100%;
@@ -263,7 +263,7 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .divisions {
-    width: 100%;
+    width: 100vw;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -277,7 +277,7 @@
     }
 
     .slider {
-      width: 90vw;
+      width: 100vw;
     }
   }
 

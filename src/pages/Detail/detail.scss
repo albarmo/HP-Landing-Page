@@ -1,0 +1,46 @@
+.header-detail {
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.747);
+
+  .heading-title {
+    padding: 10px;
+    width: 35%;
+
+    .topic {
+      background: blue;
+      width: min-content;
+      padding: 5px 10px;
+      border-radius: 2px;
+      color: white;
+    }
+
+    .properties {
+      p {
+        color: white;
+      }
+    }
+  }
+}
+
+.detail-content {
+  width: 100%;
+  height: auto;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+
+  .reader {
+    width: 55vw;
+    padding: 30px 10px;
+    text-align: justify;
+  }
+}

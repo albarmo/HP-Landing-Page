@@ -11,6 +11,7 @@ import shirtImage from "./shirt.png";
 import tributeImage from "./person.png";
 import CardProduct from "../../components/CardComponent/CardProduct";
 import { Footer } from "../../components/Footer";
+import { useHistory } from "react-router";
 
 const divisions = [
   {
@@ -44,6 +45,7 @@ const divisions = [
 ];
 
 const Home: React.FC = () => {
+  const history = useHistory();
   return (
     <div>
       <ParalaxComponent name="propsname" />
@@ -93,7 +95,10 @@ const Home: React.FC = () => {
             </div>
             <div className="sider">
               <section className="title-main">
-                <h1 className="heading">
+                <h1
+                  className="heading"
+                  onClick={() => history.push("/detail/1")}
+                >
                   Harsha Pratala Selengarakan Seminar Tropic To Arctic
                 </h1>
                 <p className="subHeading">
@@ -104,7 +109,12 @@ const Home: React.FC = () => {
                   industries to achieve digital operational excellence and
                   digital
                 </p>
-                <Button basic color="black" className="button-sider">
+                <Button
+                  basic
+                  color="black"
+                  className="button-sider"
+                  onClick={() => history.push("/detail/1")}
+                >
                   Dicover
                 </Button>
               </section>

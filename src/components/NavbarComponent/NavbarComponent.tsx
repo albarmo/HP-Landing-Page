@@ -17,7 +17,7 @@ const Menu = () => {
   );
 };
 
-const NavbarComponent: React.FC<Props> = ({ menu }) => {
+const NavbarComponent: React.FC<Props> = () => {
   const [mobileMenuDisplay, setMobileMenuDisplay] = React.useState(false);
   const [mobileSearchDisplay, setMobileSearchDisplay] = React.useState(false);
   const [scrollY, updateScrollY] = React.useState(0);
@@ -53,7 +53,7 @@ const NavbarComponent: React.FC<Props> = ({ menu }) => {
     <div
       className="navbar"
       style={
-        scrollY > 500
+        scrollY > 0
           ? {
               backgroundColor: "white",
               color: "black",

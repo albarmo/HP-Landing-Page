@@ -86,3 +86,55 @@
     background-color: #f1f1f1;
   }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .division-card {
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    height: 110px;
+    min-width: 0vw;
+    object-fit: cover;
+    background-position: top;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+
+    .title-card {
+      color: white;
+      padding-left: 0px;
+      height: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      p {
+        display: none;
+      }
+
+      .button-card {
+        margin-top: 50px;
+        display: none;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 576px;
+    min-width: 767.98px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 991.98px;
+    min-width: 768px;
+  }
+}

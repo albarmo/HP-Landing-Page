@@ -7,7 +7,7 @@ import { NavbarComponent } from "./components";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <NavbarComponent menu={{ name: "propsname", path: "propsPath" }} />
       <Router>
         <Switch>

@@ -49,3 +49,212 @@
   color: white;
   height: 30px;
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .footer {
+    width: 100vw;
+    height: 350px;
+    background-color: #111417;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .footer-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-left {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+
+        .specialFont {
+          width: 500px;
+          font-size: 20px;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          text-align: center;
+        }
+      }
+
+      .footer-right {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+          ". ."
+          ". .";
+        color: white;
+        margin-top: 50px;
+
+        .social-media {
+          display: flex;
+          align-items: center;
+          font-weight: bolder;
+          width: 120px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .footer-credit {
+    background-color: #111417;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer {
+    width: 100vw;
+    height: 350px;
+    background-color: #111417;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .footer-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-left {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+
+        .specialFont {
+          width: 500px;
+          font-size: 20px;
+          margin-top: 20px;
+          padding-bottom: 30px;
+          text-align: center;
+        }
+      }
+
+      .footer-right {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+          ". ."
+          ". .";
+        color: white;
+        margin-top: 50px;
+
+        .social-media {
+          display: flex;
+          align-items: center;
+          font-weight: bolder;
+          width: 120px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .footer-credit {
+    background-color: #111417;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer {
+    width: 100vw;
+    height: 350px;
+    background-color: #111417;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .footer-left {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+
+        p {
+          width: 50%;
+          text-align: center;
+        }
+
+        .specialFont {
+          width: 100%;
+          font-size: 30px;
+          margin-top: 10px;
+          padding-bottom: 30px;
+          text-align: center;
+        }
+      }
+
+      .footer-right {
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+          ". ."
+          ". .";
+        color: white;
+        margin-top: 50px;
+
+        .social-media {
+          display: flex;
+          align-items: center;
+          font-weight: bolder;
+          width: 120px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .footer-credit {
+    background-color: #111417;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+  }
+}

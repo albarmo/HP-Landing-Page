@@ -127,6 +127,12 @@ const Home: React.FC = () => {
           <CardArticle />
           <CardArticle />
         </section>
+
+        <div className="see-more">
+          <Button onClick={() => history.push("/list/articles")}>
+            See More
+          </Button>
+        </div>
       </div>
 
       <div className="recruitment-cta">
@@ -140,7 +146,12 @@ const Home: React.FC = () => {
             gunung dan hutan .
           </p>
         </section>
-        <button className="button-cta">Join Now</button>
+        <button
+          className="button-cta"
+          onClick={() => history.push("/recruitment")}
+        >
+          Join Now
+        </button>
       </div>
 
       <div className="events">
@@ -194,7 +205,15 @@ const Home: React.FC = () => {
                 Feedloop enables enterprises across industries to achieve
                 digital operational excellence and digital
               </p>
-              <Button id="btn">Discover</Button>
+              <Button id="btn">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/harshapratala/"
+                  rel="noreferrer"
+                >
+                  Discover
+                </a>
+              </Button>
             </section>
             <img src={shirtImage} alt="product" />
           </div>

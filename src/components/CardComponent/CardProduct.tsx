@@ -14,14 +14,20 @@ const CardProduct = () => {
       <div className="dark-overlay">
         <section className="title-card">
           <h3 className="heading" style={{ color: "white" }}>
-            ROCK CLIMBING
+            ROCK CLIMBINGs
           </h3>
           <p className="subHeading" style={{ color: "white" }}>
             Feedloop enables enterprises across industries to achieve digital
             operational excellence and digital
           </p>
           <Button basic className="button-card">
-            RP. 125K
+            <a
+              target="_blank"
+              href="https://www.tokopedia.com/"
+              rel="noreferrer"
+            >
+              RP. 125K
+            </a>
           </Button>
         </section>
       </div>

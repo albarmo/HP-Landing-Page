@@ -98,7 +98,7 @@ const Detail: React.FC = () => {
         <div className="tributes-box">
           <section className="tributes-text">
             <h1 className="heading" style={{ color: "white" }}>
-              Disini bisa diisi beda beda
+              Disini bisa diisi beda
             </h1>
             <p className="subHeading" style={{ color: "white" }}>
               HP melakukan penyaringan melalui pendidikan dasar dan beberapa

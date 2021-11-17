@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Icon, Transition } from "semantic-ui-react";
+import { Icon, Transition } from "semantic-ui-react";
 import "./navbar.scss";
 
 type Props = {
@@ -35,13 +35,6 @@ const NavbarComponent: React.FC<Props> = () => {
     console.log("Bars Clicked : ", mobileMenuDisplay);
   };
 
-  // Handle search fields on mobile screen when bar icon clicked
-  const searchClickHandler = () => {
-    setMobileSearchDisplay(!mobileSearchDisplay);
-    if (mobileMenuDisplay === true) setMobileMenuDisplay(false);
-    console.log("Bars Clicked : ", mobileSearchDisplay);
-  };
-
   React.useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
@@ -67,7 +60,9 @@ const NavbarComponent: React.FC<Props> = () => {
       }
     >
       <div className="container">
-        <h1 className="logo specialFont">HARSHA PRATALA</h1>
+        <a href="/">
+          <h1 className="logo specialFont">HARSHA PRATALA</h1>
+        </a>
 
         <div className="icon-bars" onClick={() => barClickHandler()}>
           {mobileMenuDisplay === true ? (
@@ -76,16 +71,6 @@ const NavbarComponent: React.FC<Props> = () => {
             </Transition>
           ) : (
             <Icon disabled name="bars" size="large" />
-          )}
-        </div>
-
-        <div className="icon-search" onClick={() => searchClickHandler()}>
-          {mobileSearchDisplay === true ? (
-            <Transition animation="pulse" duration={500} visible={true}>
-              <Icon disabled name="close" size="large" />
-            </Transition>
-          ) : (
-            <Icon disabled name="search" size="large" />
           )}
         </div>
 
@@ -100,34 +85,6 @@ const NavbarComponent: React.FC<Props> = () => {
             <div className="menu">
               <Menu />
             </div>
-
-            {mobileSearchDisplay === true ? (
-              <Transition.Group animation="fade down" duration={300}>
-                <div className="mobile-search">
-                  <Transition animation="jigle" duration={500}>
-                    <Input
-                      transparent
-                      fluid
-                      size="huge"
-                      icon="search"
-                      id="nav-input"
-                      placeholder="Search..."
-                    />
-                  </Transition>
-                </div>
-              </Transition.Group>
-            ) : (
-              <div className="navbar-action">
-                <Transition animation="jigle" duration={500}>
-                  <Input
-                    size="small"
-                    icon="search"
-                    placeholder="Search..."
-                    id={scrollY > 500 ? "" : "nav-input"}
-                  />
-                </Transition>
-              </div>
-            )}
           </>
         )}
       </div>

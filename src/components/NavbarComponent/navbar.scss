@@ -10,19 +10,27 @@
   position: fixed;
   background-color: transparent;
 
+  a {
+    text-decoration: none;
+    background-color: none;
+  }
+
+  .container {
+    display: flex;
+  }
   .logo {
-    width: 20%;
+    width: 30vw;
     height: 100%;
     float: left;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     font-weight: 900;
+    cursor: pointer;
   }
 
   .menu {
-    width: 50%;
-    margin: auto;
+    width: 100%;
     height: 100%;
     float: left;
     display: flex;

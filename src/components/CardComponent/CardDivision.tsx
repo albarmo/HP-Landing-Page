@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router";
 import "./Card.scss";
 
 interface IDivisionCardProps {
@@ -11,6 +12,7 @@ interface IDivisionCardProps {
 }
 
 const CardDivision: React.FC<IDivisionCardProps> = ({ division }) => {
+  const history = useHistory();
   return (
     <div
       className="division-card"
@@ -29,7 +31,12 @@ const CardDivision: React.FC<IDivisionCardProps> = ({ division }) => {
           <p className="subHeading" style={{ color: "white" }}>
             {division.description}
           </p>
-          <button className="button-card">Dicover</button>
+          <button
+            className="button-card"
+            onClick={() => history.push("/list/division")}
+          >
+            Dicover
+          </button>
         </section>
       </div>
     </div>

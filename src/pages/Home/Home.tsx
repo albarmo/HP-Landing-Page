@@ -11,6 +11,7 @@ import shirtImage from "./shirt.png";
 import tributeImage from "./person.png";
 import CardProduct from "../../components/CardComponent/CardProduct";
 import { Footer } from "../../components/Footer";
+import { useHistory } from "react-router";
 
 const divisions = [
   {
@@ -44,6 +45,7 @@ const divisions = [
 ];
 
 const Home: React.FC = () => {
+  const history = useHistory();
   return (
     <div>
       <ParalaxComponent name="propsname" />
@@ -93,7 +95,10 @@ const Home: React.FC = () => {
             </div>
             <div className="sider">
               <section className="title-main">
-                <h1 className="heading">
+                <h1
+                  className="heading"
+                  onClick={() => history.push("/detail/1")}
+                >
                   Harsha Pratala Selengarakan Seminar Tropic To Arctic
                 </h1>
                 <p className="subHeading">
@@ -104,7 +109,12 @@ const Home: React.FC = () => {
                   industries to achieve digital operational excellence and
                   digital
                 </p>
-                <Button basic color="black" className="button-sider">
+                <Button
+                  basic
+                  color="black"
+                  className="button-sider"
+                  onClick={() => history.push("/detail/1")}
+                >
                   Dicover
                 </Button>
               </section>
@@ -117,6 +127,12 @@ const Home: React.FC = () => {
           <CardArticle />
           <CardArticle />
         </section>
+
+        <div className="see-more">
+          <Button onClick={() => history.push("/list/articles")}>
+            See More
+          </Button>
+        </div>
       </div>
 
       <div className="recruitment-cta">
@@ -130,7 +146,12 @@ const Home: React.FC = () => {
             gunung dan hutan .
           </p>
         </section>
-        <button className="button-cta">Join Now</button>
+        <button
+          className="button-cta"
+          onClick={() => history.push("/recruitment")}
+        >
+          Join Now
+        </button>
       </div>
 
       <div className="events">
@@ -184,7 +205,15 @@ const Home: React.FC = () => {
                 Feedloop enables enterprises across industries to achieve
                 digital operational excellence and digital
               </p>
-              <Button id="btn">Discover</Button>
+              <Button id="btn">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/harshapratala/"
+                  rel="noreferrer"
+                >
+                  Discover
+                </a>
+              </Button>
             </section>
             <img src={shirtImage} alt="product" />
           </div>
